@@ -49,24 +49,27 @@ function Word() {
 
     return (
         <div className="section" >
-            <div className="card" >
-                <div className="card-content has-text-centered">
-                    <div className="media-content">
-                        <div className="title is-6">
-                            {word ? word.word : 'Loading'}
-                        </div>
-                        <div className="subtitle">
 
-                            {word ? word.phonetic : 'Loading'}
-                        </div>
-                    </div>
+                <div className="card" >
+                    <div className="card-content has-text-centered">
+                        <div className="media-content">
+                            <div className="title is-6">
+                                {word ? word.word : 'Loading'}
+                            </div>
+                            <div className="subtitle">
 
+                                {word ? word.phonetic : 'Loading'}
+                            </div>
+                        </div>
                 </div>
             </div>
-            <div className="container section has-text-centered">
+            <br />
+            <div className="has-text-centered">
 
-            <button className="button" onClick={() => { getNewWord() }}>New word</button>
-            <button className="button" onClick={() => { playAudio(word) }} >Correct pronunciation</button>
+                <button className="button is-success" onClick={() => { getNewWord() }}>New word</button>
+                <br /> <br />
+                <button className="button is-success" onClick={() => { playAudio(word) }} >Correct pronunciation</button>
+                <p></p>
             </div>
         </div>
 
