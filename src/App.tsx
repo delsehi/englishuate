@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Word from './components/Word'
+import Recorder from './components/Recorder'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className="container has-background-light">
+      <Word />
+      <Recorder />
+      <div className="section container has-text-centered">
+        <h3 className="title is-4">Instructions</h3>
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Record yourself pronunciating the word. Listen to the correct pronunciation.
+          Record yourself until you get it perfect and then get a new word.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      </div>
+
     </div>
   );
 }
